@@ -93,8 +93,7 @@ Built with enterprise architecture patterns used at scale.
 ## 🧪 Quickstart
 
 ```bash
-git clone https://github.com/rathishbarath/multi-agent-genai-platform
-cd multi-agent-genai-platform
+git clone https://github.com/rathishbarath/autoscilab
 ```
 
 **Backend**
