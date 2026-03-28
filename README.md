@@ -1,325 +1,164 @@
-
-<img width="1536" height="1024" alt="ChatGPT Image Dec 5, 2025, 08_05_56 PM" src="https://github.com/user-attachments/assets/05831883-fa69-4d71-af7d-3f07e20c64f7" />
-
-
-# 🚀 Multi-Agent GenAI Platform  
-**Autonomous Research • LLM Reasoning • Vector Search • PPT & Video Generation • Cloud-Native Architecture**
+# 🚀 Multi-Agent GenAI Platform
+**Autonomous Research • LLM Reasoning • Vector Search • Media Generation • Cloud-Native Architecture**
 
 <p align="center">
   <a href="https://github.com/rathishbarath/multi-agent-genai-platform/actions/workflows/ci.yaml">
-    <img src="https://github.com/rathishbarath/multi-agent-genai-platform/actions/workflows/ci.yaml/badge.svg" />
+    <img src="https://github.com/rathishbarath/multi-agent-genai-platform/actions/workflows/ci.yaml/badge.svg" alt="CI" />
   </a>
   <a href="https://github.com/rathishbarath/multi-agent-genai-platform/actions/workflows/e2e-celery.yml">
-    <img src="https://github.com/rathishbarath/multi-agent-genai-platform/actions/workflows/e2e-celery.yml/badge.svg" />
+    <img src="https://github.com/rathishbarath/multi-agent-genai-platform/actions/workflows/e2e-celery.yml/badge.svg" alt="E2E Celery" />
   </a>
   <a href="https://github.com/rathishbarath/multi-agent-genai-platform/actions/workflows/cd.yaml">
-    <img src="https://github.com/rathishbarath/multi-agent-genai-platform/actions/workflows/cd.yaml/badge.svg" />
+    <img src="https://github.com/rathishbarath/multi-agent-genai-platform/actions/workflows/cd.yaml/badge.svg" alt="CD" />
   </a>
-  <img src="https://img.shields.io/badge/Python-3.10_|_3.11-blue" />
-  <img src="https://img.shields.io/badge/FastAPI-Backend-teal" />
-  <img src="https://img.shields.io/badge/Next.js-Frontend-black" />
-  <img src="https://img.shields.io/badge/Kubernetes-Ready-blue" />
-  <img src="https://img.shields.io/badge/License-Apache_2.0-green" />
+  <img src="https://img.shields.io/badge/Python-3.10_|_3.11-blue" alt="Python" />
+  <img src="https://img.shields.io/badge/FastAPI-Backend-teal" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Next.js-Frontend-black" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Kubernetes-Ready-blue" alt="Kubernetes" />
+  <img src="https://img.shields.io/badge/License-Apache_2.0-green" alt="License" />
 </p>
 
 ---
 
-# 📌 Overview
+## 📌 Overview
 
-This is a **production-grade Multi-Agent GenAI Orchestration Platform** built using real enterprise architecture patterns used inside:
+A **production-grade multi-agent GenAI orchestration platform** that autonomously handles end-to-end research workflows:
 
+- Semantic retrieval from Semantic Scholar + arXiv  
+- Structured LLM reasoning & summarization  
+- Vector embedding & Pinecone indexing  
+- Automated PPT slide + narrated video generation  
+- Distributed execution via Celery workers  
+- Modern Next.js frontend with real-time task tracking  
+- Full observability (Prometheus, Grafana, OpenTelemetry)  
+- Kubernetes-ready deployment via Helm + GitHub Actions CI/CD  
 
-The system autonomously:
-
-- Retrieves research papers (Semantic Scholar + arXiv)  
-- Performs structured LLM reasoning  
-- Generates vector embeddings  
-- Indexes knowledge in Pinecone  
-- Produces PPT slides + narrated videos  
-- Runs distributed pipelines using Celery  
-- Exposes a modern Next.js frontend  
-- Ships with full observability (Prometheus, Grafana, OTEL)  
-- Deploys to Kubernetes via Helm + GitHub Actions CD  
-
-
-
-# 🏗 Architecture Diagram (PNG)
-
-
-<img width="1536" height="1024" alt="ChatGPT Image Dec 5, 2025, 08_00_44 PM" src="https://github.com/user-attachments/assets/482aee61-232d-402c-8698-593d1ac7a8a2" />
+Built with enterprise architecture patterns used at scale.
 
 ---
 
-# 🧱 End-to-End System Architecture
+## 🏗 Architecture
 
-### **Frontend Layer (Next.js 14)**
-- User dashboard  
-- Task status  
-- Trigger workflows  
-- Proxy layer to backend  
-- Secure SSR support  
-
-### **Backend Layer (FastAPI)**
-- Auth (JWT / OAuth2)  
-- Research orchestration  
-- LLM summarization  
-- Embeddings + Vector Search  
-- PPT + Video endpoints  
-- Health, metrics, tracing  
-
-### **Worker Layer (Celery)**
-Handles long-running async jobs:
-- Research orchestration  
-- Summarization  
-- Vector ingestion  
-- PPT generation  
-- Video generation  
-
-### **ML & Storage Layer**
-- Pinecone vector database  
-- Redis cache  
-- Postgres database  
-- Optional MinIO/S3 for media  
-
-### **DevOps & Observability**
-- Prometheus (metrics)  
-- Grafana (dashboards)  
-- Sentry (errors)  
-- OpenTelemetry (traces)  
-- Kubernetes + Helm  
-- GitHub Actions CI/CD  
+<img width="1536" height="1024" alt="System Architecture" src="https://github.com/user-attachments/assets/482aee61-232d-402c-8698-593d1ac7a8a2" />
 
 ---
 
-# 🌟 Features
+## 🧱 End-to-End Layers
 
-### 🧠 Multi-Agent AI
-- SearchAgent  
-- SummarizerAgent  
-- EmbeddingsAgent  
-- MediaAgent (PPT/Video)  
+### **Frontend** (Next.js 14)
+- Dashboard, task status, workflow triggers  
+- Secure SSR + proxy to backend  
 
-### ⚡ Distributed Pipeline
-- Async FastAPI  
-- Celery workers  
-- Redis/RabbitMQ broker  
+### **Backend** (FastAPI)
+- JWT/OAuth2 auth, research orchestration, LLM calls, embeddings, media endpoints  
 
-### 🎥 Media Generation
-- PPT via python-pptx  
-- Narrated video via MoviePy + gTTS  
+### **Worker Layer** (Celery)
+- Long-running async jobs: research → summarization → vector ingestion → PPT/Video generation  
 
-### 🔍 Semantic Search
-- SentenceTransformers embeddings  
-- Pinecone indexing  
-- SQLite fallback  
+### **ML & Storage**
+- Pinecone vector DB, Redis cache, PostgreSQL, S3/MinIO for media  
 
-### 📈 Observability
-- `/metrics` endpoint  
-- OTEL traces  
-- Grafana dashboards  
-
-### 🔒 Security
-- JWT Auth  
-- Rate limiting  
-- PodSecurity & NetworkPolicies  
-- Sentry logging  
+### **Observability & DevOps**
+- Prometheus metrics, Grafana dashboards, OpenTelemetry tracing, Sentry  
+- Kubernetes + Helm, GitHub Actions CI/CD  
 
 ---
 
-# ⚙️ Tech Stack
+## 🌟 Key Features
 
-| Layer | Technologies |
-|-------|--------------|
-| **Frontend** | Next.js, React, Tailwind |
-| **Backend** | FastAPI, SQLModel, Celery, Redis |
-| **Vector Search** | Pinecone, SentenceTransformers |
-| **Workers** | Celery, MoviePy, python-pptx |
-| **Database** | Postgres |
-| **Infra** | Docker, Kubernetes, Helm |
-| **Observability** | Prometheus, Grafana, OTEL |
-| **CI/CD** | GitHub Actions, DockerHub |
+- **Multi-Agent Orchestration** — SearchAgent, SummarizerAgent, EmbeddingsAgent, MediaAgent  
+- **Distributed Pipeline** — Async FastAPI + Celery + Redis/RabbitMQ  
+- **Semantic Search & Retrieval** — SentenceTransformers + Pinecone (with SQLite fallback)  
+- **Media Generation** — PPT (python-pptx) + narrated video (MoviePy + gTTS)  
+- **Production Observability** — `/metrics`, OTEL traces, Grafana dashboards  
+- **Enterprise Security** — JWT, rate limiting, PodSecurity, NetworkPolicies  
 
 ---
 
-# 🧪 Developer Quickstart
+## ⚙️ Tech Stack
 
-## Clone the repository
+| Layer              | Technologies                              |
+|--------------------|-------------------------------------------|
+| Frontend           | Next.js 14, React, Tailwind              |
+| Backend            | FastAPI, SQLModel, Celery, Redis         |
+| Vector Search      | Pinecone, SentenceTransformers           |
+| Workers            | Celery, MoviePy, python-pptx             |
+| Database           | PostgreSQL                               |
+| Infrastructure     | Docker, Kubernetes, Helm                 |
+| Observability      | Prometheus, Grafana, OpenTelemetry, Sentry |
+| CI/CD              | GitHub Actions, DockerHub                |
+
+---
+
+## 🧪 Quickstart
+
 ```bash
 git clone https://github.com/rathishbarath/multi-agent-genai-platform
 cd multi-agent-genai-platform
-🔧 Backend Setup
-bash
-Copy code
+```
+
+**Backend**
+```bash
 cd backend/api
 pip install -r requirements.txt
 uvicorn main:app --reload
-🚀 Start Celery Worker
-bash
-Copy code
+```
+
+**Celery Worker**
+```bash
 cd backend/workers
-pip install -r ../api/requirements.txt
 celery -A api.workers.celery_app.celery_app worker --loglevel=info
-🎨 Frontend Setup
-bash
-Copy code
+```
+
+**Frontend**
+```bash
 cd frontend/nextjs-app
 npm install
 npm run dev
-🐳 Full-stack via Docker
-bash
-Copy code
+```
+
+**Full Stack (Docker)**
+```bash
 cd infra
 docker-compose up --build
-🔐 Environment Variables
-Create backend/api/.env:
+```
 
-ini
-Copy code
-DATABASE_URL_SYNC=postgresql://postgres:postgres@localhost:5432/autoscillab
-DATABASE_URL_ASYNC=postgresql+asyncpg://postgres:postgres@localhost:5432/autoscillab
-REDIS_URL=redis://localhost:6379/0
+Create `.env` in `backend/api/` with your keys (LLM, Pinecone, etc.).
 
-JWT_SECRET=change_me
-LLM_API_KEY=
-PINECONE_API_KEY=
-SENTRY_DSN=
+---
 
-OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318/v1/traces
-🏭 Database & Migrations
-bash
-Copy code
-cd backend/api
-alembic upgrade head
-🔁 CI/CD Pipelines
-✔ CI
-Tests, linting, build
+## 📊 Observability
 
-✔ E2E Celery Tests
-Runs full research → summarize → ingest → media pipeline
+- **Metrics**: `GET /metrics` (Prometheus)
+- **Dashboards**: `grafana/dashboard_full.json` & `grafana/dashboard_enterprise.json`
+- **Traces**: OpenTelemetry on all FastAPI routes, Celery tasks, and LLM calls
 
-✔ CD Deployment
-Docker build
+---
 
-DockerHub push
+## 📘 API Endpoints (Key)
 
-Helm deployment to Kubernetes
+- `POST /agents/start_research` → Full research → media pipeline  
+- `GET /agents/task_status/{task_id}` → Summary, PPT URL, Video URL, status  
+- `GET /research/search?q=...` → Semantic lookup  
 
-Required GitHub Secrets:
-nginx
-Copy code
-DOCKERHUB_USERNAME
-DOCKERHUB_TOKEN
-KUBE_CONFIG_DATA
-JWT_SECRET
-LLM_API_KEY
-PINECONE_API_KEY
-📊 Observability
-Prometheus
-Metrics exposed at:
+---
 
-bash
-Copy code
-/metrics
-Grafana
-Dashboards located at:
+## 🎥 Demo
 
-bash
-Copy code
-grafana/dashboard_full.json
-grafana/dashboard_enterprise.json
-OpenTelemetry
-Traces emitted by:
+[Demo GIF](https://github.com/rathishbarath/multi-agent-genai-platform/blob/main/demo.gif)  
+*(Generate locally: `bash scripts/generate_demo_gif.sh`)*
 
-FastAPI routes
+---
 
-Celery operations
+## 🤝 Contributing
 
-LLM calls
+We follow Conventional Commits. PRs welcome!
 
-📘 API Documentation (Summary)
-POST /agents/start_research
-Triggers full research pipeline.
+## 📄 License
 
-json
-Copy code
-{ "query": "LLM optimization techniques" }
-GET /agents/task_status/{task_id}
-Fetches:
-
-Summary
-
-PPT URL
-
-Video URL
-
-Status
-
-GET /research/search?q=...
-Semantic research lookup.
-
-🎥 Demo GIF
-Generate:
-
-bash
-Copy code
-bash scripts/generate_demo_gif.sh
-Embed:
-
-
-Multi-Agent GenAI Platform
-
-A production-ready AI orchestration engine built with distributed microservices, LLM reasoning, semantic search, and automated media generation.
-
-🔗 GitHub: https://github.com/rathishbarath/multi-agent-genai-platform
-
-🔎 SEO Keywords (GitHub Topics)
-sql
-Copy code
-genai, multi-agent, vector-search, fastapi, nextjs, llm, pinecone,
-orchestration, research-automation, semantic-search, celery, kubernetes,
-helm, opentelemetry, grafana, prometheus, moviepy, python-pptx,
-distributed-systems, cloud-native
-🤝 Contributing
-Follow Conventional Commits:
-
-vbnet
-Copy code
-feat: add summarizer agent
-fix: redis reconnect logic
-docs: improve architecture diagram
-refactor: orchestrator async improvements
-📄 License
 Apache 2.0
 
+---
 
-## Current Benchmark Results (March 2026)
-
-**Faithfulness & Latency Evaluation** (10-document research corpus)
-
-| Dispatch Strategy     | Faithfulness Score | Avg Latency (s) | Notes                              |
-|-----------------------|--------------------|-----------------|------------------------------------|
-| Sequential            | 0.82               | 14.3            | Baseline                           |
-| Parallel (Celery)     | **0.89**           | **9.7**         | +23% faster, +8% more faithful     |
-
-- Faithfulness measured via LLM-as-judge on source-document grounding.
-- Observability: Full Prometheus + Grafana dashboards (see `/grafana/` folder).
-- Live task status endpoint: `/agents/task_status/{task_id}`
-
-
-## Current Benchmark Results (March 2026)
-
-**Faithfulness & Latency Evaluation** (10-document research corpus)
-
-| Dispatch Strategy     | Faithfulness Score | Avg Latency (s) | Notes                              |
-|-----------------------|--------------------|-----------------|------------------------------------|
-| Sequential            | 0.82               | 14.3            | Baseline                           |
-| Parallel (Celery)     | **0.89**           | **9.7**         | +23% faster, +8% more faithful     |
-
-- Faithfulness measured via LLM-as-judge on source-document grounding.
-- Observability: Prometheus + Grafana dashboards (see `/grafana/`).
-
-
-📬 Contact
-Rathish Barath
-GitHub: https://github.com/rathishbarath
-Email: rathishbarathjobs@gmail.com
+**Made by [Rathish Barath](https://github.com/rathishbarath)**
+```
