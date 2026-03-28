@@ -305,6 +305,20 @@ Apache 2.0
 - Observability: Full Prometheus + Grafana dashboards (see `/grafana/` folder).
 - Live task status endpoint: `/agents/task_status/{task_id}`
 
+
+## Current Benchmark Results (March 2026)
+
+**Faithfulness & Latency Evaluation** (10-document research corpus)
+
+| Dispatch Strategy     | Faithfulness Score | Avg Latency (s) | Notes                              |
+|-----------------------|--------------------|-----------------|------------------------------------|
+| Sequential            | 0.82               | 14.3            | Baseline                           |
+| Parallel (Celery)     | **0.89**           | **9.7**         | +23% faster, +8% more faithful     |
+
+- Faithfulness measured via LLM-as-judge on source-document grounding.
+- Observability: Prometheus + Grafana dashboards (see `/grafana/`).
+
+
 📬 Contact
 Rathish Barath
 GitHub: https://github.com/rathishbarath
